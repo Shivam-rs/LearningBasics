@@ -60,7 +60,7 @@ public class MenuRunner {
 		case 1:
 			result = number1 + number2;
 			System.out.println("Result is " + result);
-			break;
+			break; // test
 
 		case 2:
 			result = number1 - number2;
