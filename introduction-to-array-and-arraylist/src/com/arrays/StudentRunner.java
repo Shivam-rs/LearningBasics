@@ -1,7 +1,6 @@
 package com.arrays;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 
 public class StudentRunner {
 
@@ -9,9 +8,10 @@ public class StudentRunner {
 		int[] marks = { 9, 98, 100 };
 		Student student = new Student("Shivam", marks);
 
-		System.out.println(Arrays.toString(marks));
-		String z = Arrays.toString(marks), xx = "IDK";
-		System.out.println(z + xx);
+		/*
+		 * System.out.println(Arrays.toString(marks)); String z =
+		 * Arrays.toString(marks), xx = "IDK"; System.out.println(z + xx);
+		 */
 		int numberOfMarks = student.getNumberOfMarks();
 		System.out.println("numberOfMarks :" + numberOfMarks);
 
@@ -26,7 +26,13 @@ public class StudentRunner {
 
 		BigDecimal average = student.getAverageMarks();
 		System.out.println("average :" + average);
+		System.out.println(student);
 
+		student.addNewMark(35);
+		System.out.println(student);
+
+		student.removeMarksAtIndex(2);
+		System.out.println(student);
 	}
 
 }

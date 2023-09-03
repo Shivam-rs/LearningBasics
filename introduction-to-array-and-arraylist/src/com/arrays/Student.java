@@ -2,27 +2,28 @@ package com.arrays;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Student {
 
-	private int[] marks;
+	private ArrayList<Integer> marks = new ArrayList<Integer>();
 	private String name;
 	private int sum = 0;
 
 	public Student(String name, int[] marks) {
 		this.name = name;
-
-		this.marks = marks;
-
-		Arrays.sort(marks);
+		for (int mark : marks) {
+			this.marks.add(mark);
+		}
+		// Arrays.sort(marks);
 	}
 
-	int length;
+
 	public int getNumberOfMarks() {
 		// TODO Auto-generated method stub
-		length = marks.length;
-		return marks.length;
+		// length = marks.length;;
+		return marks.size();
 	}
 
 	public int getTotalSumOfMarks() {
@@ -36,20 +37,33 @@ public class Student {
 
 
 	public int getMaximumMarks() {
-		// TODO Auto-generated method stub
-		// int length = marks.length;
-		return marks[length - 1];
+		return Collections.max(marks);
 	}
 
 	public int getMinimumMarks() {
 		// TODO Auto-generated method stub
-		return marks[0];
+		return Collections.min(marks);
 	}
 
 	public BigDecimal getAverageMarks() {
+
+		return new BigDecimal(sum).divide(new BigDecimal(marks.size()), 3, RoundingMode.UP);
+	}
+
+	@Override
+	public String toString() {
+		return name + marks;
+	}
+
+	public void addNewMark(int mark) {
 		// TODO Auto-generated method stub
-		// int length = marks.length;
-		return new BigDecimal(sum).divide(new BigDecimal(length), 3, RoundingMode.UP);
+		marks.add(mark);
+
+	}
+
+	public void removeMarksAtIndex(int index) {
+		// TODO Auto-generated method stub
+		marks.remove(index);
 	}
 
 }
