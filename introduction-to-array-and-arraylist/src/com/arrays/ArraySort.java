@@ -8,7 +8,7 @@ public class ArraySort {
 		// TODO Auto-generated method stub
 
 		int[] lol = arr.clone();
-		int k = new int[6];
+		int[] k = new int[6];
 
 		Arrays.sort(lol);
 

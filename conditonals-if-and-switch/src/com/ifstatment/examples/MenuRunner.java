@@ -27,33 +27,6 @@ public class MenuRunner {
 
 	}
 
-	private static void operationUsingIfElse(int number1, int number2, int operationIs) {
-		double result;
-		if (operationIs == 1) {
-
-			result = number1 + number2;
-			System.out.println("Result is " + result);
-
-		} else if (operationIs == 2) {
-
-			result = number1 - number2;
-			System.out.println("Result is " + result);
-
-		} else if (operationIs == 3) {
-
-			result = number1 * number2;
-			System.out.println("Result is " + result);
-
-		} else if (operationIs == 4) {
-
-			result = number1 / number2;
-			System.out.println("Result is " + result);
-
-		} else {
-			System.out.println("Enter a valid operation number");
-		}
-	}
-
 	private static void operationUsingSwitch(int number1, int number2, int operationIs) {
 		double result;
 		switch (operationIs) {
