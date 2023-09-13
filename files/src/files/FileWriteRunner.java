@@ -13,7 +13,7 @@ public class FileWriteRunner {
 
 		Path pathFileToRead = Paths.get("./resources/file-write.txt");
 
-		List<String> list = List.of("Apple", "Cat", "Boy", "Dog", "Elephant");
+		List<String> list = List.of("Apple", "Cat", "Boy", "Dog", "Elephant", "Test");
 
 		Files.write(pathFileToRead, list);
 	}
